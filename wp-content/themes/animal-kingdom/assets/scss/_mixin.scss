@@ -1,0 +1,61 @@
+@mixin flex($align, $justify, $wrap, $column) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    @if $wrap {
+      flex-wrap: $wrap;
+    }
+    @if $column {
+      flex-direction: $column;
+    }
+  }
+  
+  // width-height property mixins
+  @mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+  }
+
+  @mixin fontSize-lineHeight($fontSize, $lineHeight){
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  
+  @mixin position($position, $top, $bottom, $left, $right) {
+    position: $position;
+    @if $top {
+      top: $top;
+    }
+    @if $bottom {
+      bottom: $bottom;
+    }
+    @if $left {
+      left: $left;
+    }
+    @if $right {
+      right: $right;
+    }
+  }
+  
+  // background property mixins
+  @mixin backgroundImage(
+    $image,
+    $no_repeat,
+    $pos_x,
+    $pos_y,
+    $size,
+    $size_x,
+    $size_y
+  ) {
+    background-image: $image;
+    background-repeat: $no_repeat;
+    @if $pos_x {
+      background-position: $pos_x $pos_y;
+    }
+    @if $size {
+      background-size: $size;
+    }
+    @if $size_x {
+      background-size: $size_x $size_y;
+    }
+  }

@@ -1,0 +1,129 @@
+/* --------------------------------------------------
+	typography
+-------------------------------------------------- */
+
+html, body, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,  center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, mark, audio, video {
+}
+
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+em,
+i,
+time,
+div {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1,
+.h1,
+.title {
+  font-size: 52px;
+  line-height: normal;
+  font-family: $Livvic-SemiBold;
+
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 42px;
+  }
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
+}
+
+h2,
+.h2 {
+  font-family: $Livvic-Bold;
+  font-size: 48px;
+  line-height: normal;
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 32px;
+  
+  }
+  @media (max-width: 767px) {
+    font-size: 26px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 42px;
+  font-family: $Livvic-SemiBold;
+  line-height: normal;
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 38px;
+  font-family: $Livvic-SemiBold;
+  line-height: normal;
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 32px;
+  font-family: $Livvic-SemiBold;
+  line-height: normal;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 24px;
+  line-height: normal;
+  font-family: $Livvic-SemiBold;
+  margin: 0px;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.subtitle {  
+  font-size: 16px;
+  letter-spacing: 1.23px;
+  line-height: 20px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $Livvic;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  line-height: 20px;
+  }
+}

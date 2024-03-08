@@ -1,0 +1,206 @@
+.category-page-wrapper {
+    position: relative;
+
+    .category-tab-wrapper {
+        padding-top: 80px;
+        border-bottom: 1px solid $darkBrown;
+        margin-bottom: 30px;
+        .category-tab {
+            @include flex(null, null, null, null);
+            overflow-y: auto;
+
+            li {
+                cursor: pointer;
+                padding: 30px 34px;
+                color: $darkGreen3;
+                min-width: fit-content;
+                white-space: nowrap;
+                @extend .text-22;
+
+                @media (max-width: 767px) {
+                    padding: 20px 24px;
+                }
+
+                &.active,
+                &:hover {
+                    background-color: $darkGreen2;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .sorting-wrapper {
+        margin-bottom: 20px;
+
+        .sorting-btn {
+            width: 100%;
+            text-align: right;
+        }
+    }
+
+    .category-listing-wrapper {
+        margin-bottom: 120px;
+        .category-listing-card-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+    
+            .category-listing-card-item {
+                width: 25%;
+                padding: 0 10px;
+                margin-bottom: 40px;
+                @include flex(null, null, null, column);
+    
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    width: 50%;
+                    margin-bottom: 20px;
+                }
+                @media (max-width: 767px) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .category-listing-card-img-wrapper {
+                    position: relative;
+                    margin-bottom: 15px;
+                    height: 400px;
+                    transition: all 0.1s ease-in-out;
+                    @media (min-width: 1024px) and (max-width: 1199px) {
+                        height: 300px;
+                    }
+                    @media (max-width: 1023px) {
+                        height: 350px;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(0deg, rgba(242, 171, 67, 0.56) 0%, rgba(242, 171, 67, 0.56) 100%);
+                        opacity: 0;
+                    }
+                    img {
+                        border-radius: 10px 10px 0px 0px;
+                    }
+                }
+    
+                .category-listing-card-content {
+                    background-color: $pinkDark;
+                    transition: all 0.1s ease-in-out;
+                    width: 100%;
+                    padding: 24px 10px;
+                    color: $brown;
+                    text-align: center;
+                    font-family: $Livvic-Bold;
+                    @media (min-width: 1024px) and (max-width: 1199px) {
+                        padding: 18px 10px;
+                    }
+                }
+    
+                &:hover {
+                    .category-listing-card-img-wrapper {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                    .category-listing-card-content {
+                        background-color: $lightYellow;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+.favorite-farm-animal-wrapper {
+
+    .farm-animal-list-wrapper {
+        @include flex(null, null, wrap, null);
+        margin: 0 -12px;
+        .farm-animal-list-item {
+            @include flex(flex-start, null, null, null);
+            position: relative;
+            width: 50%;
+            padding: 0 12px;
+            margin-bottom: 80px;
+
+            @media (max-width: 1199px) {
+                width: 100%;
+                margin-bottom: 100px;
+            }
+
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+
+            &:nth-child(2n) {
+                margin-top: 60px;
+                @media (max-width: 1199px) {
+                    margin-top: 0;
+                }
+            }
+
+            .farm-animal-list-item-img-wrapper {
+                width: 280px;
+                height: 350px;
+                position: absolute;
+                z-index: 1;
+                top: 50px;
+                transform: rotate(-2deg);
+
+                @media (max-width: 767px) {
+                    width: 70%;
+                    height: 260px;
+                    top: 40px;
+                    transform: rotate(-3deg);
+                }
+            }
+
+            .farm-animal-list-content-wrapper {
+                background-image: url("../../assets/images/pink-rough-bg.svg");
+                background-repeat: no-repeat;
+                background-position: left top;
+                width: 100%;
+                position: relative;
+                display: inline-block;
+                padding: 55px 90px 190px;
+                padding-left: 300px;
+
+                @media (min-width: 1200px) and (max-width: 1440px) {
+                    padding-bottom: 100px;
+                }
+
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    padding-bottom: 95px;
+                    background-size: 100%;
+                }
+
+                @media (min-width: 768px) and (max-width: 991px) {
+                    padding-bottom: 95px;
+                    background-size: 100%;
+                }
+
+                @media (max-width: 767px) {
+                    padding: 340px 30px 60px;
+                    background-size: cover;
+                    background-position: left -32px top;
+                }
+
+                h5 {
+                    font-family: $Livvic-Bold;
+                }
+
+                p {
+                    @extend .text-20;
+                }
+
+                a {
+                    @extend .text-20;
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}

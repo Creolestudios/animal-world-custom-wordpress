@@ -1,0 +1,40 @@
+<?php
+/**
+ * Template for animal-category mega menu.
+ */
+
+// Get all the animal-category terms.
+$category_terms = get_terms(
+	[
+		'taxonomy'   => 'animal-categories',
+		'hide_empty' => true,
+	]
+);
+$first_cat_id   = $category_terms[0]->term_id;
+?>
+
+<div class="menu-popup-wrapper">
+	<div class="menu-popup-category-wrapper">
+		<ul>
+			<?php
+			// Display animal-category terms.
+			if ( ! empty( $category_terms ) ) {
+				foreach ( $category_terms as $cat_term ) {
+					$term_id      = $cat_term->term_id;
+					$term_name    = $cat_term->name;
+					$active_class = $term_id === $first_cat_id ? 'active' : '';
+					?>
+						<li class="animal-category <?php echo esc_attr( $active_class ); ?>" data-term-id="<?php echo esc_attr( $term_id ); ?>"><?php echo esc_attr( $term_name ); ?></li>
+					<?php
+				}
+			}
+			?>
+		</ul>
+	</div>
+	<div class="megamenu-category-item-wrapper">
+		<ul class="megamenu-category-item"></ul>
+	</div>
+	<div class="loader loader-animal-menu" style="display:none">
+		<img src="<?php echo esc_attr( AKD_THEME_URI . '/dist/assets/images/loader.gif' ); ?>" alt="loader">
+	</div>
+</div>

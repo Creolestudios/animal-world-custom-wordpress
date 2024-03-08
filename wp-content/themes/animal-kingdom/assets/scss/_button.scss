@@ -1,0 +1,87 @@
+.btn-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+  width: 100%;
+}
+.btn {
+  @include flex(center, center, null, null);
+  border: 2px solid $darkBrown;
+  transition: all 0.2s ease-in-out;
+  padding: 10px 32px;
+  background-color: $darkBrown;
+  box-shadow: none;
+  outline: none;
+  color: $white;
+  height: fit-content;
+  position: relative;
+  @extend .text-20;
+  @media screen and (max-width: 1440px){
+    font-size: 18px;
+  }
+  @media screen and (max-width: 991px){
+    font-size: 16px;
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border-color: $darkBrown;
+    color: $darkBrown;
+  }
+
+  &.btn-white {
+    border: 2px solid $white;
+    background-color: $white;
+    color: $brown;
+
+    &:hover,
+    &:focus {
+      background-color: $darkBrown;
+      border-color: $darkBrown;
+      color: $white;
+    }
+  }
+
+  &.btn-lightBrown {
+    border: 2px solid $brown;
+    background-color: $brown;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: $brown;
+      color: $brown;
+    }
+  }
+
+  &.btn-transparent-brown {
+    background-color: transparent;
+    border-color: $darkBrown;
+    color: $darkBrown;
+
+    &:hover,
+    &:focus {
+      background-color: $darkBrown;
+      border-color: $darkBrown;
+      color: $white;
+    }
+  }
+
+  &.btn-transparent-white {
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      border-color: $white;
+      color: $darkBrown;
+    }
+  }
+}
+

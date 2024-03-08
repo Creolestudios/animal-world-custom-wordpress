@@ -1,0 +1,140 @@
+.contact-form-wrapper {
+    @include flex(center, null, null, null);
+    margin-bottom: 30px;
+
+    @media (max-width: 767px) {
+        @include flex(null, null, null, column);
+    }
+
+    .contact-left {
+        width: 60%;
+        padding-right: 85px;
+        @media (max-width: 767px) {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+        form {
+            .form-group {
+                @include flex(null, null, null, column);
+                position: relative;
+                margin-bottom: 28px;
+
+                label {
+                    margin-bottom: 15px;
+                    color: $brown;
+                    @extend .text-18;
+                }
+
+                input,
+                textarea {
+                    background-color: $pink;
+                    border: 0;
+                    box-shadow: none;
+                    outline: none;
+                    padding: 20px;
+                    border: 1px solid transparent;
+                    @extend .text-20;
+                    &::placeholder {
+                        color: $pinkDark1;
+                    }
+                }
+
+                .select-dropdown {
+                    z-index: 1;
+                    .select-dropdown__button {
+                        padding: 20px;
+                        background-color: $pink;
+                        span {
+                            @extend .text-20;
+                            color: $pinkDark1;
+                        }
+                    }
+                }
+
+                .phone-number-wrapper {
+                    @include flex(null, null, null, null);
+                    .phone-number-left {
+                        min-width: 100px;
+                        width: 100px;
+                        margin-right: 15px;
+
+                        .select-dropdown {
+                            z-index: 3;
+                        }
+                    }
+                    .phone-number-right {
+                        width: 100%;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+
+                    .form-error {
+                        input {
+                            border: 1px solid $danger;
+                            box-shadow: 0px 2px 6px 3px rgb(192 73 73 / 30%);
+                        }
+                    }
+                }
+
+                &.form-error {
+                    input,
+                    textarea {
+                        border: 1px solid $danger;
+                        box-shadow: 0px 2px 6px 3px rgb(192 73 73 / 30%);
+                    }
+                    .select-dropdown {
+                        .select-dropdown__button {
+                            border: 1px solid $danger;
+                            box-shadow: 0px 2px 6px 3px rgb(192 73 73 / 30%);
+                        }
+                    }
+                }
+            }
+
+            .contact-submit {
+                .error {
+                    margin-top: 20px;
+                    color: $danger;
+                    display: inline-block;
+                }
+
+                .success-response {
+                    margin-top: 20px;
+                    color: $success;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .contact-right {
+        width: 40%;
+        max-width: 520px;
+        height: 100%;
+        margin-left: auto;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+}
+.contact-footer {
+    h2 {
+        margin-bottom: 40px;
+    }
+    .contact-footer-address {
+        @extend .text-20;
+        max-width: 165px;
+        margin-bottom: 30px;
+        color: $lightYellow;
+
+        span {
+            color: $brown;
+        }
+    }
+}
